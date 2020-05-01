@@ -1,36 +1,93 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
-<link rel="stylesheet" type="text/css" href="landscape.css" media="screen and (orientation:landscape)"/>
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 
 <html>
 <head>
-    <title> Dinner Decider </title>
+    <title> Random Restaurant </title>
 </head>
 
 <body>
     <!-- HTML5 article tag for content -->
     <div id="content">
-   
-    <header>Dinner Decider</header>
 
-   <!-- H1 means 1st level heading -->
-   <h1>Welcome Back User!</h1>
+    <button class="back" onClick="location.href='HomePage.html';">Back</button>
+   
+    <br>
+   
+    <header>Random Restaurant</header>
     
    <!-- P stands for paragraph -->
-   <p>We believe in bicycles! Everything you need to be a WPI Cyclist.</p>
-   
-   <!-- Navigation buttons -->
-   <nav id="main_nav">
-      <ul>
-         <!-- LI stands for list item -->
-         <li><a href="Buttons.html">Bike Stores </a></li>
-         <li><a href="maps.html">Bike Maps </a></li>
-         <li><a href="ride.html">Go for a Ride</a></li>
-      </ul>
-   </nav>
+   <p>Input your choices of restaurants (up to 4). Then click Confirm and 
+   Dinner Decider will decide for you where you want to eat!</p>
+
+   <p>Choose a Restaurant:</p>
+
+   <select id="Restaurant1">
+     <option value="Wendy">Wendy's</option>
+     <option value="OliveGarden">Olive Garden</option>
+     <option value="PaneraBread">Panera Bread</option>
+     <option value="Boomers">Boomers</option>
+   </select>
+
+   <br>
+
+   <select id="Restaurant2">
+     <option value="Wendy">Wendy's</option>
+     <option value="OliveGarden">Olive Garden</option>
+     <option value="PaneraBread">Panera Bread</option>
+     <option value="Boomers">Boomers</option>
+   </select>
+
+   <br>
+
+   <select id="Restaurant3">
+     <option value="Wendy">Wendy's</option>
+     <option value="OliveGarden">Olive Garden</option>
+     <option value="PaneraBread">Panera Bread</option>
+     <option value="Boomers">Boomers</option>
+   </select>
+
+   <br>
+
+   <select id="Restaurant4">
+     <option value="Wendy">Wendy's</option>
+     <option value="OliveGarden">Olive Garden</option>
+     <option value="PaneraBread">Panera Bread</option>
+     <option value="Boomers">Boomers</option>
+   </select>
+
+   <button class="confirm" onClick="randomlinks()">Confirm</button>
 
    <footer>CS3041: Human-Computer Interaction </footer>
     </div>
+
+<script>
+function randomlinks(){
+    var links=new Array()
+    var option1 = document.getElementById("Restaurant1").value
+    var option2 = document.getElementById("Restaurant2").value
+    var option3 = document.getElementById("Restaurant3").value
+    var option4 = document.getElementById("Restaurant4").value
+
+   if(option1 == "Wendy" || option2 == "Wendy" || option3 == "Wendy" || option4 == "Wendy"){
+      links.push("Wendy.html")
+   }
+   if(option1 == "PaneraBread" || option2 == "PaneraBread" || option3 == "PaneraBread" || option4 == "PaneraBread"){
+      links.push("PaneraBread.html")
+   }
+   if(option1 == "OliveGarden" || option2 == "OliveGarden" || option3 == "OliveGarden" || option4 == "OliveGarden"){
+      links.push("OliveGarden.html")
+   }
+   if(option1 == "Boomers" || option2 == "Boomers" || option3 == "Boomers" || option4 == "Boomers"){
+      links.push("Boomers.html")
+   }
+
+    var rannum=Math.round(Math.random()*links.length)
+ 
+    location.href=links[rannum]
+}
+
+</script>
 </body>
 </html>

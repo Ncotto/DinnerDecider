@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+<html>
+<head>
+    <title> Favorites </title>
+</head>
+
+<body>
+    <!-- HTML5 article tag for content -->
+    <div id="content">
+
+    <button class="back" onClick="location.href='ProfilePage.html';">Back</button>
+   
+    <br>
+   
+    <header>Favorites</header>
+    
+   <!-- P stands for paragraph -->
+   <p>Your favorite restaurants! Click "Random Choice" to pick one your favorites.</p>
+
+   <p>Your Favorites:</p>
+
+   <ul style="list-style-type:none;">
+     <li>Boomers</li>
+     <li>Olive Garden</li>
+     <li>Dragon Dynasty</li>
+     <li>Thai Time</li>
+   </ul>
+
+   <button class="confirm" onClick="randomlinks()">Random Choice</button>
+   <button class="confirm" onClick="location.href='Error.html';">Edit</button>
+
+   <footer>CS3041: Human-Computer Interaction </footer>
+    </div>
+<script>
+function randomlinks(){
+    var myrandom=Math.round(Math.random()*3)
+    var links=new Array()
+    links[0]="ThaiTime.html"
+    links[1]="OliveGarden.html"
+    links[2]="DD.html"
+    links[3]="Boomers.html"
+ 
+    location.href=links[myrandom]
+}
+
+</script>
+</body>
+</html>

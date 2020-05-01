@@ -1,36 +1,138 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
-<link rel="stylesheet" type="text/css" href="landscape.css" media="screen and (orientation:landscape)"/>
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 
 <html>
 <head>
-    <title> Dinner Decider </title>
+    <title> Questionnaire </title>
 </head>
 
 <body>
     <!-- HTML5 article tag for content -->
     <div id="content">
-   
-    <header>Dinner Decider</header>
 
-   <!-- H1 means 1st level heading -->
-   <h1>Welcome Back User!</h1>
+    <button class="back" onClick="location.href='HomePage.html';">Back</button>
+   
+    <br>
+
+    <header>Questionnaire</header>
     
    <!-- P stands for paragraph -->
-   <p>We believe in bicycles! Everything you need to be a WPI Cyclist.</p>
+   <p>Decide what prefernces you have for your resturant and 
+   Dinner Decider will find one for you.</p>
    
-   <!-- Navigation buttons -->
-   <nav id="main_nav">
-      <ul>
-         <!-- LI stands for list item -->
-         <li><a href="Buttons.html">Bike Stores </a></li>
-         <li><a href="maps.html">Bike Maps </a></li>
-         <li><a href="ride.html">Go for a Ride</a></li>
-      </ul>
-   </nav>
+ <label for="Price">Choose a Price:</label>
+
+   <br>
+
+   <select id="Price">
+     <option value="AnyPrice">Any Price</option>
+     <option value="$">$</option>
+     <option value="$$">$$</option>
+     <option value="$$$">$$$</option>
+   </select>
+   
+   <br>
+
+   <label for="Distance">Choose a Distance:</label>
+
+   <br>
+
+   <select id="Distance">
+     <option value="AnyDistance">Any Distance</option>
+     <option value="5Miles">5 Miles</option>
+     <option value="10Miles">10 Miles</option>
+     <option value="15Miles">15 Miles</option>
+   </select>
+
+   <br>
+
+   <label for="Type">Choose a Type:</label>
+
+   <br>
+
+   <select id="Type">
+     <option value="AnyType">Any Type</option>
+     <option value="Italian">Italian</option>
+     <option value="American">American</option>
+     <option value="Thai">Thai</option>
+   </select>
+   
+   <br>
+
+   <label for="DietRestric">Choose a Dietary Restriction:</label>
+
+   <br>
+
+   <select id="DietRestric">
+     <option value="None">None</option>
+     <option value="Vegan">Vegan</option>
+     <option value="Vegetarian">Vegetarian</option>
+     <option value="GlutenFree">Gluten Free</option>
+   </select>
+
+   <br>
+
+   <label for="Rating">Choose a Rating:</label>
+
+   <br>
+
+   <select id="Rating">
+     <option value="Any Rating">Any Rating</option>
+     <option value="5 Stars">5 Stars</option>
+     <option value="4 Stars">4 Stars</option>
+     <option value="3 Stars">3 Stars</option>
+   </select>
+
+   <br>
+
+   <label for="Eat">Choose a Way to Eat:</label>
+
+   <br>
+
+   <select id="EatOption">
+     <option value="AnyWAy">Any Way</option>
+     <option value="EatIn">Eat In</option>
+     <option value="PickUp">Pick-Up</option>
+     <option value="Delivery">Delivery</option>
+   </select>
+
+   <button class="confirm" onClick="checkanswers()">Confirm</button>
+   <button class="confirm" onClick="location.href='Error.html';">Save Answers</button>
 
    <footer>CS3041: Human-Computer Interaction </footer>
     </div>
+
+<script>
+function checkanswers(){
+	var option1 = document.getElementById("Price").value
+	var option2 = document.getElementById("Distance").value
+	var option3 = document.getElementById("Type").value
+	var option4 = document.getElementById("DietRestric").value
+	var option5 = document.getElementById("Rating").value
+	var option6 = document.getElementById("EatOption").value
+	if(option2 == "5Miles" || option5=="3 Stars" || option6 == "Delivery"){
+		location.href="Wendy.html"
+	}
+	else if(option1 == "$$" || option2 == "15Miles" || option3 == "Italian"){
+		location.href="OliveGarden.html"
+	}
+	else if(option3 == "American" || option6 == "PickUp"){
+		location.href="Boomers.html"
+	}
+	else if(option3 == "Thai" || option6 == "EatIn"){
+		location.href="ThaiTime.html"
+	}
+	else if(option1 == "$" || option5 == "4Stars" || option4 == "Vegetarian"){
+		location.href="DD.html"
+	}
+	else{
+		location.href="PaneraBread.html"
+	}
+}
+
+
+</script>
+
 </body>
 </html>

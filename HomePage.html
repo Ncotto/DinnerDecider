@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
-<link rel="stylesheet" type="text/css" href="landscape.css" media="screen and (orientation:landscape)"/>
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 
 <html>
@@ -8,7 +7,8 @@
     <title> Dinner Decider </title>
 </head>
 
-<body>
+<body onload ="initBody()">
+
     <!-- HTML5 article tag for content -->
     <div id="content">
    
@@ -21,7 +21,8 @@
    <nav id="main_nav">
       <ul>
          <!-- LI stands for list item -->
-         <li><a href="LogIn.html">Log In </a></li>
+	 <li><a href="ProfilePage.html" id="profile">Profile Page</a></li>
+	 <li><a href="LogIn.html" id="login" onClick = "changevar()">Log In </a></li>
          <li><a href="RandomRestaurant.html">Random Restaurant </a></li>
          <li><a href="Questionnaire.html">Questionnaire</a></li>
       </ul>
@@ -29,5 +30,25 @@
 
    <footer>CS3041: Human-Computer Interaction </footer>
     </div>
+
+<script>
+var loggedin = false;
+localStorage.setItem("loginkey", loggedin)
+
+function changevar(){
+    loggin = true;
+}
+
+function initBody() { 	
+    loggedin = localStorage.getItem("loginkey") 
+    if(loggedin == true) {
+	document.getElementById("profile").style.visibility = "visible";
+	document.getElementById("login").style.visibility = "hidden";
+    } 
+    else {
+	document.getElementById("profile").style.visibility = "hidden";
+    }
+}
+</script>
 </body>
 </html>
