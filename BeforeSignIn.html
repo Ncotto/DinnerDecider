@@ -4,33 +4,26 @@
 
 <html>
 <head>
-    <title> Profile Page </title>
+    <title> Dinner Decider </title>
 </head>
 
-<body>
+<body onload ="initBody()">
+
     <!-- HTML5 article tag for content -->
     <div id="content">
-
-    <button class="back" onClick="location.href='HomePage.html';">Back</button>
-
-    <br>
    
-    <header>Profile Page</header>
-
-   <!-- H1 means 1st level heading -->
-   <h1>Welcome Back User!</h1>
+    <header>Dinner Decider</header>
    
    <!-- Navigation buttons -->
    <nav id="main_nav">
       <ul>
          <!-- LI stands for list item -->
-         <li><a href="Favorites.html">Favorites</a></li>
-         <li><a href="UsersFilters.html">Questionnaire</a></li>
-         <li><a href="BeforeSignIn.html">Log Out</a></li>
+	 <li><a href="LogIn.html" id="login" onClick = "changevar()">Log In </a></li>
       </ul>
    </nav>
 
    <footer>CS3041: Human-Computer Interaction </footer>
     </div>
+
 </body>
 </html>

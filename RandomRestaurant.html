@@ -28,6 +28,12 @@
      <option value="OliveGarden">Olive Garden</option>
      <option value="PaneraBread">Panera Bread</option>
      <option value="Boomers">Boomers</option>
+     <option value="DD">Dragon Dynasty</option>
+     <option value="NU">NU Kitchen</option>
+     <option value="Boynton">Boynton Restaurant</option>
+     <option value="Sake">Sake Bomb Bistro</option>
+     <option value="Sole">Sole Proprietor</option>
+     <option value="ThaiTime">Thai Time</option>
    </select>
 
    <br>
@@ -37,6 +43,12 @@
      <option value="OliveGarden">Olive Garden</option>
      <option value="PaneraBread">Panera Bread</option>
      <option value="Boomers">Boomers</option>
+     <option value="DD">Dragon Dynasty</option>
+     <option value="NU">NU Kitchen</option>
+     <option value="Boynton">Boynton Restaurant</option>
+     <option value="Sake">Sake Bomb Bistro</option>
+     <option value="Sole">Sole Proprietor</option>
+     <option value="ThaiTime">Thai Time</option>
    </select>
 
    <br>
@@ -46,6 +58,12 @@
      <option value="OliveGarden">Olive Garden</option>
      <option value="PaneraBread">Panera Bread</option>
      <option value="Boomers">Boomers</option>
+     <option value="DD">Dragon Dynasty</option>
+     <option value="NU">NU Kitchen</option>
+     <option value="Boynton">Boynton Restaurant</option>
+     <option value="Sake">Sake Bomb Bistro</option>
+     <option value="Sole">Sole Proprietor</option>
+     <option value="ThaiTime">Thai Time</option>
    </select>
 
    <br>
@@ -55,6 +73,12 @@
      <option value="OliveGarden">Olive Garden</option>
      <option value="PaneraBread">Panera Bread</option>
      <option value="Boomers">Boomers</option>
+     <option value="DD">Dragon Dynasty</option>
+     <option value="NU">NU Kitchen</option>
+     <option value="Boynton">Boynton Restaurant</option>
+     <option value="Sake">Sake Bomb Bistro</option>
+     <option value="Sole">Sole Proprietor</option>
+     <option value="ThaiTime">Thai Time</option>
    </select>
 
    <button class="confirm" onClick="randomlinks()">Confirm</button>
@@ -81,6 +105,27 @@ function randomlinks(){
    }
    if(option1 == "Boomers" || option2 == "Boomers" || option3 == "Boomers" || option4 == "Boomers"){
       links.push("Boomers.html")
+   }
+   if(option1 == "DD" || option2 == "DD" || option3 == "DD" || option4 == "DD"){
+      links.push("DD.html")
+   }
+   if(option1 == "NU" || option2 == "NU" || option3 == "NU" || option4 == "NU"){
+      links.push("NU.html")
+   }
+   if(option1 == "Boynton" || option2 == "Boynton" || option3 == "Boynton" || option4 == "Boynton"){
+      links.push("Boynton.html")
+   }
+   if(option1 == "Sake" || option2 == "Sake" || option3 == "Sake" || option4 == "Sake"){
+      links.push("Sake.html")
+   }
+   if(option1 == "Sole" || option2 == "Sole" || option3 == "Sole" || option4 == "Sole"){
+      links.push("Sole.html")
+   }
+   if(option1 == "ThaiTime" || option2 == "ThaiTime" || option3 == "ThaiTime" || option4 == "ThaiTime"){
+      links.push("ThaiTime.html")
+   }
+   else{
+      links.push("Wendy.html")
    }
 
     var rannum=Math.round(Math.random()*links.length)

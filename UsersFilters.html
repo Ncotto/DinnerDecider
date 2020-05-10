@@ -40,7 +40,7 @@
 
    <br>
 
-   <p>Thai</p>
+   <p>Any Type</p>
    
    <br>
 
@@ -71,5 +71,20 @@
 
    <footer>CS3041: Human-Computer Interaction </footer>
     </div>
+<script>
+function randomlinks(){
+    var links=new Array()
+
+    links.push("ThaiTime.html")
+    links.push("Sake.html")
+    links.push("Wendy.html")
+    links.push("Boynton.html")
+
+    var rannum=Math.round(Math.random()*links.length)
+ 
+    location.href=links[rannum]
+}
+
+</script>
 </body>
 </html>

@@ -56,6 +56,7 @@
      <option value="Italian">Italian</option>
      <option value="American">American</option>
      <option value="Thai">Thai</option>
+     <option value="Asian">Asian</option>
    </select>
    
    <br>
@@ -91,7 +92,7 @@
    <br>
 
    <select id="EatOption">
-     <option value="AnyWAy">Any Way</option>
+     <option value="AnyWay">Any Way</option>
      <option value="EatIn">Eat In</option>
      <option value="PickUp">Pick-Up</option>
      <option value="Delivery">Delivery</option>
@@ -105,30 +106,49 @@
 
 <script>
 function checkanswers(){
+
+    	var links=new Array()
+
 	var option1 = document.getElementById("Price").value
 	var option2 = document.getElementById("Distance").value
 	var option3 = document.getElementById("Type").value
 	var option4 = document.getElementById("DietRestric").value
 	var option5 = document.getElementById("Rating").value
 	var option6 = document.getElementById("EatOption").value
+
 	if(option2 == "5Miles" || option5=="3 Stars" || option6 == "Delivery"){
-		location.href="Wendy.html"
+      		links.push("Wendy.html")
 	}
 	else if(option1 == "$$" || option2 == "15Miles" || option3 == "Italian"){
-		location.href="OliveGarden.html"
+		links.push("OliveGarden.html")
 	}
-	else if(option3 == "American" || option6 == "PickUp"){
-		location.href="Boomers.html"
+	else if(option6 == "PickUp"){
+		links.push("Boomers.html")
 	}
 	else if(option3 == "Thai" || option6 == "EatIn"){
-		location.href="ThaiTime.html"
+		links.push("ThaiTime.html")
 	}
-	else if(option1 == "$" || option5 == "4Stars" || option4 == "Vegetarian"){
-		location.href="DD.html"
+	else if(option1 == "$" || option5 == "4 Stars" || option4 == "Vegetarian"){
+		links.push("DD.html")
+	}
+	else if(option1 == "$$$" || option5 == "5 Stars"){
+		links.push("Sole.html")
+	}
+	else if(option3 == "American" || option4 == "GlutenFree"){
+		links.push("Boynton.html")
+	}
+	else if(option4 == "Vegetarian"){
+		links.push("NU.html")
+	}
+	else if(option3 == "Asian"){
+		links.push("Sake.html")
 	}
 	else{
-		location.href="PaneraBread.html"
+		links.push("PaneraBread.html")
 	}
+    var rannum=Math.round(Math.random()*links.length)
+ 
+    location.href=links[rannum]
 }
 
 

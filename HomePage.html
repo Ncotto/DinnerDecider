@@ -7,7 +7,7 @@
     <title> Dinner Decider </title>
 </head>
 
-<body onload ="initBody()">
+<body>
 
     <!-- HTML5 article tag for content -->
     <div id="content">
@@ -22,7 +22,6 @@
       <ul>
          <!-- LI stands for list item -->
 	 <li><a href="ProfilePage.html" id="profile">Profile Page</a></li>
-	 <li><a href="LogIn.html" id="login" onClick = "changevar()">Log In </a></li>
          <li><a href="RandomRestaurant.html">Random Restaurant </a></li>
          <li><a href="Questionnaire.html">Questionnaire</a></li>
       </ul>
@@ -31,24 +30,5 @@
    <footer>CS3041: Human-Computer Interaction </footer>
     </div>
 
-<script>
-var loggedin = false;
-localStorage.setItem("loginkey", loggedin)
-
-function changevar(){
-    loggin = true;
-}
-
-function initBody() { 	
-    loggedin = localStorage.getItem("loginkey") 
-    if(loggedin == true) {
-	document.getElementById("profile").style.visibility = "visible";
-	document.getElementById("login").style.visibility = "hidden";
-    } 
-    else {
-	document.getElementById("profile").style.visibility = "hidden";
-    }
-}
-</script>
 </body>
 </html>
