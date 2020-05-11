@@ -20,7 +20,16 @@
 			<input type="password" name="pwd" id="pwd" required>      
 			<br />       
 			<button class="submit" id = "submit" onClick="location.href='./index.html';">Submit</button>    
-		</form>          
+		</form>   
+		<div>             
+			<div class="error" id="name-error">Name(required):</div>
+			<input type="text" name="name" id="name" required>
+			<br />
+			<div class="error" id="pwd-error">Password(required):</div>       
+			<input type="password" name="pwd" id="pwd" required>      
+			<br />       
+			<button class="submit" id = "submit" onClick="location.href='./index.html';">Submit</button>    
+		</div> 
 	</div>
 <script>
 function loadpage(){
@@ -32,6 +41,8 @@ document.getElementById("name").addEventListener("keyup", function checktext1(){
 	var pw = document.getElementById("pwd").value
 	if(name.length > 0 && pw.length > 0){
 		document.getElementById("submit").style.visibility = "visible";
+	}else{
+		document.getElementById("submit").style.visibility = "invisible";
 	}
 })
 
@@ -40,7 +51,7 @@ document.getElementById("pwd").addEventListener("keyup", function checktext2(){
 	var pw = document.getElementById("pwd").value
 	if(name.length > 0 && pw.length > 0){
 		document.getElementById("submit").style.visibility = "visible";
-	}
+	}else{document.getElementById("submit").style.visibility = "invisible";}
 })
 
 </script>
