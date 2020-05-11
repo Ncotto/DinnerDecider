@@ -19,16 +19,15 @@
 			<div class="error" id="pwd-error">Password(required):</div>       
 			<input type="password" name="pwd" id="pwd" required>      
 			<br />       
-			<button class="submit" id = "submit" onClick="location.href='./index.html';">Submit</button>     
-		</form>
-			<input type="text" name="name" id="name" required>
-			<br />
-			<div class="error" id="pwd-error">Password(required):</div>       
-			<input type="password" name="pwd" id="pwd" required>      
-			<br />       
-			<button class="submit" id = "submit" onClick="location.href='./index.html';">Submit</button> 
+			<button class="submit" id = "submit" onClick="clicked()">Submit</button>     
+		</form> 
 	</div>
 <script>
+function clicked(){
+	alert("hello")
+	location.href='./index.html';
+}
+
 function loadpage(){
 	document.getElementById("submit").style.visibility = "hidden";
 }
