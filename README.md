@@ -1,18 +1,18 @@
 # Dinner-Decider
+# Creator: Nicole Cotto
 
-Open the HomePage.html to start the application
+My goal for this application was to help indecisive people be able to decide a place to eat.
+I wanted to do this by:
+ 1. Setting up a randomized generator based off of restaurants the users would give it
+ 2. Have a questionnaire that asks the user certain preferences they have in a  restuarant
 
-The application opens up on the home page. From here you are free to roam around the application.
+Open the BeforeSignIn.html to start the application or 
+use the link https://ncotto.github.io/DinnerDecider/BeforeSignIn.html
 
-Possibly helpful information:
+Then right-click the webpage and click Inspect. 
+From here change the viewing of the application to iPhone 6/7/8
 
-Currently, the application has you log in every time. 
-That will be further worked on so that once you log in you can go straight to the profile page.
-
-On the login page will take any input, but the submit button will not show up until both name and password have been entered.
-
-Currently the "Edit" and "Add to Favorites" buttons are not yet implmented.
-
-Lastly, the Random Restaurant page gives options for now
+Once it is setup, you just have to sign in, any input will work. 
+Then you can freely explore the application.
 
  
